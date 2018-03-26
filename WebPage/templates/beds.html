@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<head lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beds</title>
+<style>
+    #modal {
+        height: 100%;
+        width: 100%;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    img {
+        width: 100%;
+        border: 2px solid #ccc;
+    }
+
+    li {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #outer {
+        float: left;
+        width: 9.5%;
+        border: 1px solid #ccc;
+        box-shadow: 0px 0px 5px 0px #888888;
+    }
+
+    #inner {
+        width: 100%;
+    }
+
+    #card-head {
+        text-align: center;
+    }
+
+    .card-img {
+        height: 50%;
+    }
+</style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno1">
+                    Bed No. 1
+                </h3>
+            </div>
+            <div id="card-img">
+                <img src="freeBed1.jpg" id="img1">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno2">
+                    Bed No. 2
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img2">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno3">
+                    Bed No. 3
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img3">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno4">
+                    Bed No. 4
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img4">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno5">
+                    Bed No. 5
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img5">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno6">
+                    Bed No. 6
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img6">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno7">
+                    Bed No. 7
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img7">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno8">
+                    Bed No. 8
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img8">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno9">
+                    Bed No. 9
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img9">
+            </div>
+        </div>
+    </div>
+    <div id="outer">
+        <div id="inner">
+            <div id="card-head">
+                <h3 id="bedno10">
+                    Bed No. 10
+                </h3>
+            </div>
+            <div class="card-img">
+                <img src="freeBed1.jpg" id="img10">
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBvaDQmMFg6nuJDo5kEd3_aYjfICR-36XY",
+            authDomain: "sample-project-maan1.firebaseapp.com",
+            databaseURL: "https://cu-hackoverflow.firebaseio.com/",
+            projectId: "cu-hackoverflow",
+            storageBucket: "cu-hackoverflow.appspot.com",
+            messagingSenderId: "1083480193818"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script>
+        img1 = document.getElementById('img1')
+        bedno1 = document.getElementById('bedno1')
+        bedno1Ref = firebase.database().ref().child("Bed1")
+        img2 = document.getElementById('img2')
+        bedno2 = document.getElementById('bedno2')
+        bedno2Ref = firebase.database().ref().child("Bed2")
+        img3 = document.getElementById('img3')
+        bedno3 = document.getElementById('bedno3')
+        bedno3Ref = firebase.database().ref().child("Bed3")
+        img4 = document.getElementById('img4')
+        bedno4 = document.getElementById('bedno4')
+        bedno4Ref = firebase.database().ref().child("Bed4")
+        img5 = document.getElementById('img5')
+        bedno5 = document.getElementById('bedno5')
+        bedno5Ref = firebase.database().ref().child("Bed5")
+        img6 = document.getElementById('img6')
+        bedno6 = document.getElementById('bedno6')
+        bedno6Ref = firebase.database().ref().child("Bed6")
+        img7 = document.getElementById('img7')
+        bedno7 = document.getElementById('bedno7')
+        bedno7Ref = firebase.database().ref().child("Bed7")
+        img8 = document.getElementById('img8')
+        bedno8 = document.getElementById('bedno8')
+        bedno8Ref = firebase.database().ref().child("Bed8")
+        img9 = document.getElementById('img9')
+        bedno9 = document.getElementById('bedno9')
+        bedno9Ref = firebase.database().ref().child("Bed9")
+        img10 = document.getElementById('img10')
+        bedno10 = document.getElementById('bedno10')
+        bedno10Ref = firebase.database().ref().child("Bed10")
+        bedno2Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img2.src = "takenbed.jpg"
+            }
+        })
+        bedno1Ref.on("value",function(datasnapshot){
+           var b = datasnapshot
+            if(b.val()=="Taken") {
+                img1.src = "takenbed.jpg"
+            }
+        })
+        bedno3Ref.on("value",function(datasnapshot){
+            var c = datasnapshot
+            if(c.val()=="Taken") {
+                img3.src = "takenbed.jpg"
+            }
+        })
+        bedno4Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img4.src = "takenbed.jpg"
+            }
+        })
+        bedno5Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img5.src = "takenbed.jpg"
+            }
+        })
+        bedno6Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img6.src = "takenbed.jpg"
+            }
+        })
+        bedno7Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img7.src = "takenbed.jpg"
+            }
+        })
+        bedno8Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img8.src = "takenbed.jpg"
+            }
+        })
+        bedno9Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img9.src = "takenbed.jpg"
+            }
+        })
+        bedno10Ref.on("value",function(datasnapshot){
+            var a = datasnapshot
+            if(a.val()=="Taken") {
+                img10.src = "takenbed.jpg"
+            }
+        })
+
+    </script>
+</body>
+</html>
