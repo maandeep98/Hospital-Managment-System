@@ -1,0 +1,253 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <style>
+            html,body {
+                margin: 0%;
+                padding: 0%;
+            }
+
+            .page {
+                height: 100%;
+                width: 100%;
+            }
+
+            .outer {
+                height: 100%;
+                width: 40%;
+                margin-left: 30%;
+            }
+
+            .inner {
+                margin-top: 5%;
+                margin-bottom: 5%;
+                height: auto;
+                width: 100%;
+                border: 2px solid black;
+                padding: 5%;
+                box-shadow: 2px 2px 2px 2px gray;
+            }
+
+            #form-header {
+                color: cornflowerblue;
+            }
+
+            input,option,select {
+                margin-top: 5%;
+                margin-left: 10%;
+                width: 25em;
+            }
+
+            .input {
+                width: 100%;
+                height: auto;
+            }
+
+            .input-header {
+                width: 10em;
+            }
+
+            tr {
+               align-items: center;
+            }
+
+            td {
+                align-self: center;
+                text-align: center;
+            }
+
+            textarea {
+                width: 25em;
+                height: auto;
+                margin-left: 3em;
+            }
+
+            table {
+                width: 90%;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .input-head {
+                text-align: center;
+                font-size: 1em;
+            }
+
+            #submit {
+                width: 15em;
+                height: 3em;
+            }
+
+            #stable {
+                background-color: lightgreen;
+                font-weight: bold;
+            }
+
+            #attention {
+                background-color: yellow;
+                font-weight: bold;
+            }
+
+            #critical {
+                background-color: lightcoral;
+                font-weight: bold;
+            }
+
+            #dead {
+                background-color: lightgrey;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <div class="outer">
+                <div class="inner">
+                    <form method="post" action="/">
+                        <h1 id="form-header">
+                            Patient's Registration Form
+                        </h1>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">Today's date</span>
+                                </td>
+                                <td class="input">
+                                    <input type="date" id="today-date" name="date" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">Patient's Name</span>
+                                </td>
+                                <td class="input">
+                                    <input type="text" placeholder="Enter Name" name="pname" id="pname" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">Gender</span>
+                                </td>
+                                <td class="input">
+                                    <select id="gender" name="gender" required>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">
+                                        Phone
+                                    </span>
+                                </td>
+                                <td class="input">
+                                    <input type="text" id="pno" name="pno" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">
+                                        Date of Birth
+                                    </span>
+                                </td>
+                                <td class="input">
+                                    <input type="date" id="dob" name="dob" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">
+                                        Address
+                                    </span>
+                                </td>
+                                <td class="input">
+                                    <textarea id="address" name="address" required></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">
+                                        Insurance
+                                    </span>
+                                </td>
+                                <td class="input">
+                                    <select id="insurance" name="insurance" required>
+                                        <option value="yes">
+                                            Yes
+                                        </option>
+                                        <option value="no">
+                                            No
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">
+                                        Patient's Condition
+                                    </span>
+                                </td>
+                                <td class="input">
+                                    <select id="status" name="status" required>
+                                        <option value="Critical" id="critical">
+                                            Critical
+                                        </option>
+                                        <option value="Needs Attention" id="attention">
+                                            Needs Attention
+                                        </option>
+                                        <option value="Stable" id="stable">
+                                            Stable
+                                        </option>
+                                        <option value="Dead" id="dead">
+                                            Dead
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">
+                                        Injury
+                                    </span>
+                                </td>
+                                <td class="input">
+                                    <input type="text" id="injury" name="injury" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="input-header">
+                                    <span class="input-head">
+                                        First Aid Doctor
+                                    </span>
+                                </td>
+                                <td class="input">
+                                    <input type="text" id="doc" name="doc" required>
+                                </td>
+                            </tr>
+                            <tr>
+                               <td colspan="2">
+                                    <input type="submit" id="submit" value="Add Patient">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    <script>
+        var firebaseHeader = document.getElementById('form-header')
+        var firebaseHeadingRef = firebase.database().ref().child("Heading")
+
+        firebaseHeadingRef.on('value' , function(datasnapshot){
+            firebaseHeading.innerText = datasnapshot
+        })
+    </script>
+    </body>
+</html>
