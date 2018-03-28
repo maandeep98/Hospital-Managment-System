@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        html,body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .inner {
+            background-color: aliceblue;
+        }
+
+        .page {
+            height: 100%;
+            width: 100%;
+        }
+
+        .outer {
+            height: 100%;
+            width: 40%;
+            margin-left: 30%;
+        }
+
+        .inner {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            height: auto;
+            width: 100%;
+            border: 2px solid black;
+            padding: 5%;
+            box-shadow: 2px 2px 2px 2px gray;
+        }
+
+        #form-header {
+            color: cornflowerblue;
+        }
+
+        input,option,select {
+            margin-top: 5%;
+            margin-left: 10%;
+            width: 25em;
+        }
+
+        .input {
+            width: 100%;
+            height: auto;
+        }
+
+        .input-header {
+            width: 10em;
+        }
+
+        tr {
+            align-items: center;
+        }
+
+        td {
+            align-self: center;
+            text-align: center;
+        }
+
+        textarea {
+            width: 25em;
+            height: auto;
+            margin-left: 3em;
+        }
+
+        table {
+            width: 90%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input-head {
+            text-align: center;
+            font-size: 1em;
+        }
+
+        #submit,#newpat {
+            width: 15em;
+            height: 3em;
+        }
+
+        #stable {
+            background-color: lightgreen;
+            font-weight: bold;
+        }
+
+        #attention {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        #critical {
+            background-color: lightcoral;
+            font-weight: bold;
+        }
+
+        #dead {
+            background-color: lightgrey;
+            font-weight: bold;
+        }
+
+        .button {
+            height: 30%;
+            width: 30%;
+            font-size: 15px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: black;
+            background-color: deepskyblue;
+            border: none;
+            box-shadow: 0 4px #999;
+        }
+
+        .button:hover {background-color: dodgerblue}
+
+        .button:active {
+            background-color: dodgerblue;
+            box-shadow: 0 2px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+    <div class="outer">
+        <div class="inner">
+            <form method="post" action="/patient_schedule">
+                <h1 id="form-header">
+                    Patient's Schedule
+                </h1>
+                <hr>
+                <table>
+                    <tr>
+                        <td class="input-header">
+                            <span class="input-head">Time</span>
+                        </td>
+                        <td class="input">
+                            <input type="text" id="time" placeholder="hh:mm:ss" name="time" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input-header">
+                            <span class="input-head">Patient's Medication</span>
+                        </td>
+                        <td class="input">
+                            <input type="text" name="task" id="task" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" id="submit" value="Add Patient's Task" class="button">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input type="button" id="newpat" value="Add New Patient" onclick="redirect()" class="button">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function redirect(){
+        window.location = "/"
+    }
+</script>
+</body>
+</html>
